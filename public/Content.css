@@ -1,0 +1,234 @@
+.Container{
+    grid-area: container; 
+    display: grid; 
+    transition: .5s all;
+
+}
+
+.container-grid-standard{
+    grid-template-rows: 100px .8fr 1.2fr; 
+    grid-template-areas: "categories""movies""time"; 
+    align-items: center; 
+}
+
+.container-grid-playing{
+    grid-template-rows: 100px .8fr 1.2fr; 
+    grid-template-areas: "categories""time""time"; 
+    align-items: center; 
+}
+.categoryContainer{
+    grid-area: categories; 
+    background: #073780; 
+}
+.categoriesText{
+    color: white; 
+    font-weight: bold; 
+    font-family: Arial; 
+    font-size: 20px; 
+    padding: 0px 10px; 
+    display: inline-block; 
+}
+.ButtonsContainer{
+    justify-content: space-around; 
+    display: inline; 
+    padding: 10px; 
+}
+.ButtonsCategories{
+    height: 30px;   
+    padding: 0px 10px; 
+    border: none; 
+    border-radius: 7%; 
+    margin: 0px 5px; 
+    cursor: pointer; 
+    transition: .2s; 
+}
+
+.ButtonsCategories:hover{
+    background-color: rgb(17, 105, 17);
+    color: white; 
+}
+
+.MoviesLayout{
+    grid-area: movies; 
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 50%, rgba(0,0,0,1) 51%, rgba(51,51,51,1) 100%);
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: "image title"
+}
+
+.ImageMovie{
+    display: grid; 
+    grid-area: image; 
+}
+
+.ImageMovie img{
+    border: 5px solid white; 
+    justify-self: end; 
+    margin: 10px 20px; 
+    align-self: center; 
+    height: 200px;
+    width: 200px;
+}
+
+.TitleMovie{
+    grid-area: title; 
+    color: white; 
+    font-family: Arial;
+    display: grid; 
+    grid-template-columns: 1fr 90px; 
+    grid-template-areas: "texto button";
+    align-items: center; 
+    justify-items: start; 
+}
+
+.TitleMovie h2,h3{
+    grid-area: texto; 
+    margin:0; 
+}
+
+.NextMovieButton{
+    grid-area: button; 
+    display: grid; 
+    align-content: center; 
+}
+
+.NextMovieButton button{
+    background-color: rgba(0, 0, 0, 0);
+    color: white; 
+    border: none; 
+    font-size: 50px; 
+    transition: all .2s;
+}
+/* 
+    Fabio Palacios
+    Cll 30 21 112 
+    Reobolo
+    Estrato 2 
+    Me gustan todos los sabores
+    Tres vces por semana 
+    21 aÃ±os
+    3022939843
+*/
+.NextMovieButton button:hover{
+    color: rgb(106, 202, 106); 
+    transform: scale(1.4);
+}
+.PlayTimerButton{
+    grid-area: button; 
+    display: grid; 
+    align-content: center; 
+}
+
+.PlayTimerButton button{
+    background-color: rgba(0, 0, 0, 0);
+    color: white; 
+    margin-right: 40px; 
+    border: none; 
+    font-size: 30px; 
+    transition: all .2s;
+    border-radius: 10%; 
+    padding: 10px; 
+    border: 5px solid rgb(255, 255, 255); 
+}
+
+.PlayTimerButton button:hover{
+    color: rgb(141, 141, 141); 
+    transform: scale(1.2) translateX(-10px);
+}
+
+.TimerLayout{
+    grid-area: time; 
+    transition: .5s all;
+    height: 100%;
+    /* background: url('https://www.navitasventures.com/wp-content/uploads/2016/06/Material-design-background-514054880_2126x1416.jpeg'); */
+    background-size: cover;     
+    display:flex; 
+    position: relative; 
+    border: 5px solid white; 
+}
+
+.container-win{
+    position: absolute; 
+    bottom: 10px; 
+    left: 30px; 
+    width: 100%; 
+    justify-self: center; 
+}
+.container-win > button{
+    height: 50px;
+    padding: 5px; 
+    width: 90%; 
+    background-color: orangered; 
+    border: 5px solid white; 
+    color: white; 
+    font-weight: bold;  
+}
+.color-load{
+    color: white; 
+    background-color: rgb(6, 53, 6); 
+ 
+}
+.color-warning{
+    color: rgb(168, 7, 7); 
+    background-color: rgb(226, 226, 226); 
+}
+.TimerLayout p{
+    flex: 1; 
+    align-self: center; 
+    justify-self: center; 
+    padding: 0px; 
+    font-size: 90px; 
+    font-family: Arial; 
+    text-align: center; 
+    font-weight: bold; 
+}
+
+.swal-title,.swal-text{
+    font-family: Arial;
+}
+
+.info-movie{
+    position:absolute; 
+    top: 10px; 
+    left: 5px; 
+}
+
+.info-movie .icon {
+    display: inline-block;
+    background-color: black; 
+    color: white; 
+    border-radius: 100%; 
+    padding: 5px 10px; 
+}
+
+.info-movie .title-hidden{
+    display: none; 
+    margin-left:-10px; 
+    font-family: arial; 
+    background-color: rgba(0,0,0,.5);
+    padding: 4px 20px; 
+    border-top-right-radius: 5%; 
+    border-bottom-right-radius: 5%; 
+    transition: all ease 1s; 
+    font-size: 14px;
+}
+.title-hidden{
+    transition: all ease 1s; 
+    -webkit-transition: all ease 1s; 
+    -moz-transition: all ease 1s; 
+}
+
+.info-movie:hover .title-hidden{
+    display: inline-block; 
+}
+
+.more-movies{
+    color: white; 
+    background-color: rgba(36, 107, 238, 0.103);
+    padding: 5px 10px; 
+    position: absolute; 
+    right: 0px; 
+    font-weight: bold; 
+    top:0px;     
+}

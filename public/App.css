@@ -1,0 +1,159 @@
+body{
+  margin: 0; 
+  padding: 0; 
+  background: #000; 
+  height: 100vh;
+  overflow: hidden; 
+}
+
+#root{
+  height: 100vh;
+  width: 100vw; 
+}
+
+.dump{
+  display:grid; 
+  grid-template-columns: 320px 1fr; 
+  grid-template-areas: "navBar container";
+}
+
+.MenuContainer{
+  grid-area: navBar; 
+  background: linear-gradient(to bottom, rgba(73,155,234,1) 0%, rgba(12,54,99,1) 100%);
+  width: auto; 
+  max-width: 330px; 
+  height: 100vh;
+  display:grid;
+  grid-template-rows:  200px 1fr; 
+  grid-template-areas: "header""list";
+  box-shadow: 2px 0px 10px black; 
+}
+
+.HeaderMenu{
+  position: relative;
+  background: url('https://klika-site-production.s3.amazonaws.com/uploads/article/image/10/thumb_blog_illustracija.png');
+  grid-area: header; 
+  height: 160px;
+  width: 100%;
+  display:grid; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-areas: "image""name""type";
+  justify-items: center; 
+  padding-bottom: 40px; 
+  box-shadow: 2px 0px 4px black; 
+  
+  /* Gradients */
+
+}
+.imageProfile{
+  grid-area: image; 
+  display: block; 
+  position: relative; 
+}
+.imageProfile img{
+  border-radius: 100%;
+  margin: 20px 10px;  
+  height: 60px;
+  width: 60px; 
+  border: solid 4px white; 
+}
+
+.nameProfile,.typeProfile{
+  grid-area: name; 
+  color: rgb(255, 255, 255);
+  font-family:Arial; 
+  margin: 0px auto;
+  font-size: 24px;
+}
+
+.typeProfile{
+  grid-area:type; 
+  font-size: 18px; 
+}
+
+.listTeamContainer{
+  grid-area: list; 
+  box-shadow: 0px 4px 10px black; 
+}
+
+.titleListTeam{
+  font-family: Arial; 
+  font-weight: bold; 
+  padding:0px 10px; 
+  font-size: 20px; 
+  display: inline-block;
+  color: white; 
+}
+
+.newTeam{
+  background: rgba(0, 0, 0, 0); 
+  border: none; 
+  border-bottom: 2px solid white; 
+  display:none; 
+  color: white; 
+  font-size: 14px; 
+  width: 120px; 
+}
+
+
+
+.ButtonsTeam{
+  display: inline-block;
+  float: right;
+  margin-top: 10px; 
+  margin-right: 10px; 
+}
+.ButtonsTeam button{
+  cursor:pointer; 
+  padding:6px 10px; 
+  border-radius: 100%; 
+  background: rgb(8, 133, 14); 
+  border: none; 
+  color: white; 
+  font-size: 20px;   
+  transition: all .1s; 
+  box-shadow: 0px 0px 2px black; 
+}
+.ButtonsTeam button:hover{
+  transform: scale(1.2);
+}
+.itemList{
+  background: #CFD8DC;
+  font-weight: 500; 
+  font-family: Arial; 
+  padding: 5px 10px; 
+  color: rgb(19, 24, 85); 
+  height: 50px;
+  border: 2px solid white; 
+}
+
+
+.itemList p{
+  display: inline-block; 
+}
+.itemList p:nth-child(2){
+  float: right; 
+  width: 30px; 
+  border-radius: 10%; 
+  text-align: center; 
+  padding: 2px; 
+  font-weight: bold; 
+  background: rgb(248, 58, 0); 
+  color: #FFF
+}
+
+
+@media only screen and (max-width: 1020px){
+  .dump{
+    display:grid; 
+    grid-template-columns: 1fr; 
+    grid-template-areas: "container";
+  }
+  .container-grid-standard{
+    grid-template-rows: 100px .5fr .5fr; 
+  }
+  .MenuContainer{
+    display:none; 
+  }
+}
+
